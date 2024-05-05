@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "type": "module",
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^8.52.0",
+    "prettier": "^3.1.0",
+    "prettier-eslint": "^16.1.2"
+  },
   "scripts": {
     "dev:server": "node --watch src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
