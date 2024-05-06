@@ -1,4 +1,4 @@
-import Mail from "../lib/Mail.js";
+import registrationUserQueue from "../lib/Queue.js";
 
 class UserController {
   async create(request, response) {
@@ -6,13 +6,7 @@ class UserController {
 
     const user = { name, email };
 
-    // TODO: send a confirmation email to the user
-    await Mail.sendMail({
-      from: "Queue test <queue@example.com>",
-      to: `${user.name} <${user.email}>`,
-      subject: "Welcome",
-      html: `Welcome, ${user.name}!`,
-    });
+    registrationUserQueue.add("registrationMail", user);
 
     return response.json(user);
   }

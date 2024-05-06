@@ -11,6 +11,7 @@
   },
   "scripts": {
     "dev:server": "node --watch src/server.js",
+    "dev:worker": "node --watch src/worker.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
